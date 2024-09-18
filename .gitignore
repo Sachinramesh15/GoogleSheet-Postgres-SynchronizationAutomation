@@ -1,0 +1,10 @@
+# Python
+*.pyc
+*.pyo
+
+# Credentials
+credentials.json
+token.json
+
+# Environment files
+.env

@@ -1,0 +1,9 @@
+psycopg2-binary
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+google-api-python-client
+python-dotenv
+fastapi
+uvicorn
+ngrok

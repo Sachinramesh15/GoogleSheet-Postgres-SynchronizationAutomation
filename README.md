@@ -20,6 +20,7 @@ I created a Google Apps Script trigger that detects edits in the Google Sheet an
 - **Psycopg2**: For interaction with PostgreSQL using Python.
 - **Ngrok**: For forwarding the local FastAPI server to the web to receive Google Sheets updates.
 - **Docker**: For containerizing the application and making deployment easier.
+- **Google App Script**: For creating a trigger for the google sheet.
 
 ## How Conflicts Are Handled
 
@@ -27,7 +28,7 @@ Conflicts can arise when:
 - A user updates both Google Sheets and PostgreSQL at the same time.
 - Google Sheets and the database contain different data at the time of synchronization.
 
-To manage this, I:
+To manage this:
 - Compare the data in both sources to detect discrepancies.
 - Use the following rules for conflict resolution:
   - If a record is present in the Google Sheet but missing in PostgreSQL, it is added to the database.
@@ -95,7 +96,7 @@ ngrok http 8000
 ```
 ### Step 6: Set Up Google Apps Script
 
-Copy the script provided in the `trigger.js` file into your Google Apps Script Editor.
+Copy the script provided in the `app_script.js` file into your Google Apps Script Editor.
 Update the endpoint URL in the script to point to your Ngrok URL (or production URL).
 Deploy the Google Apps Script and create an onEdit trigger to detect changes in the Google Sheet.
 
